@@ -28,13 +28,13 @@ $miniProgram = $app->mini_program;
 ### 通过 Code 换取 SessionKey
 
 ```php
-$miniProgram->sns->getSessionKey($code);
+$sessionKey=$miniProgram->sns->getSessionKey($code);
 ```
 
 ## 加密数据解密
 
 ```php
-$miniProgram->encryptor->decryptData($sessionKey, $iv, $encryptedData);
+$miniProgram->encryptor->decryptData($sessionKey->sessionKey, $iv, $encryptedData);
 ```
 
 ## 数据分析
